@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Design Tokens ─────────────────────────────────────── */
+:root {
+  --ds-color-bg:            #0C0C0F;
+  --ds-color-surface:       #13131A;
+  --ds-color-border:        #1E1E28;
+  --ds-color-border-bright: #2E2E3E;
+  --ds-color-text:          #EEEEF2;
+  --ds-color-muted:         #6B6B80;
+  --ds-color-subtle:        #3A3A4E;
+  --ds-color-accent:        #5B6AF5;
+  --ds-color-accent-hover:  #7480FF;
+  --ds-color-accent-muted:  #1A1D3F;
+  --ds-color-warm:          #F5855B;
+  --ds-color-green:         #4AF0A0;
+
+  --ds-font-sans:  'DM Sans', system-ui, sans-serif;
+  --ds-font-mono:  'DM Mono', 'Fira Code', monospace;
+
+  --ds-spacing-1:  4px;
+  --ds-spacing-2:  8px;
+  --ds-spacing-3:  12px;
+  --ds-spacing-4:  16px;
+  --ds-spacing-6:  24px;
+  --ds-spacing-8:  32px;
+  --ds-spacing-12: 48px;
+  --ds-spacing-16: 64px;
+
+  --ds-radius:    6px;
+  --ds-radius-lg: 12px;
+
+  --ds-shadow-card: 0 1px 3px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.3);
+  --ds-shadow-glow: 0 0 40px rgba(91,106,245,0.12);
+
+  --font-dm-sans: 'DM Sans', sans-serif;
+  --font-dm-mono: 'DM Mono', monospace;
+}
+
+/* ── Base ──────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--ds-color-bg);
+  color: var(--ds-color-text);
+  font-family: var(--ds-font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dot grid background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, #2a2a3a 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Typography ────────────────────────────────────────── */
+.font-mono { font-family: var(--ds-font-mono); }
+.font-sans  { font-family: var(--ds-font-sans); }
+
+/* ── Token tag ─────────────────────────────────────────── */
+.token-tag {
+  font-family: var(--ds-font-mono);
+  font-size: 11px;
+  background: var(--ds-color-surface);
+  border: 1px solid var(--ds-color-border-bright);
+  color: var(--ds-color-accent);
+  padding: 3px 10px;
+  border-radius: 99px;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--ds-color-bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--ds-color-border-bright);
+  border-radius: 99px;
+}
+
+/* ── Selection ─────────────────────────────────────────── */
+::selection {
+  background: var(--ds-color-accent-muted);
+  color: var(--ds-color-text);
+}
+
+/* ── Token strip scroll ────────────────────────────────── */
+.token-strip-track {
+  display: flex;
+  gap: 12px;
+  animation: tokenScroll 40s linear infinite;
+  width: max-content;
+}
+
+@keyframes tokenScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.token-strip-track:hover {
+  animation-play-state: paused;
+}
