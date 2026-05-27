@@ -2,6 +2,7 @@ import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import FeaturedWork from '@/components/FeaturedWork'
 import Work from '@/components/Work'
+import Globe from '@/components/Globe'
 import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
 import Footer from '@/components/Footer'
@@ -16,6 +17,7 @@ export default function Home() {
       <FeaturedWork />
       <HillsDivider />
       <Work />
+      <Globe />
       <Projects />
       <Skills />
       <Footer />
