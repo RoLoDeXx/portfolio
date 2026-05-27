@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useRef } from 'react'
 import { motion, animate, useInView } from 'framer-motion'
-import { person, tokens } from '@/lib/data'
+import { person } from '@/lib/data'
 import { HeroScene } from '@/components/SceneBg'
 
 function CountUp({ to, suffix = '' }: { to: number; suffix?: string }) {
@@ -33,8 +33,6 @@ const stats = [
 const words = person.name.split(' ')
 
 export default function Hero() {
-  const doubledTokens = [...tokens, ...tokens]
-
   return (
     <section className="relative min-h-screen flex flex-col justify-center pt-24 pb-0 overflow-hidden">
 
@@ -183,30 +181,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Token strip */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.95, duration: 0.8 }}
-        className="relative mt-20 overflow-hidden"
-        style={{ borderTop: '1px solid var(--ds-color-border)', borderBottom: '1px solid var(--ds-color-border)' }}
-      >
-        <div className="py-3 flex">
-          <div className="token-strip-track">
-            {doubledTokens.map((token, i) => (
-              <span key={i} className="token-tag">{token}</span>
-            ))}
-          </div>
-        </div>
-        <div
-          className="absolute inset-y-0 left-0 w-24 pointer-events-none"
-          style={{ background: 'linear-gradient(to right, var(--ds-color-bg), transparent)' }}
-        />
-        <div
-          className="absolute inset-y-0 right-0 w-24 pointer-events-none"
-          style={{ background: 'linear-gradient(to left, var(--ds-color-bg), transparent)' }}
-        />
-      </motion.div>
     </section>
   )
 }

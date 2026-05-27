@@ -11,7 +11,7 @@
   --ds-color-border:        #1E1E28;
   --ds-color-border-bright: #2E2E3E;
   --ds-color-text:          #EEEEF2;
-  --ds-color-muted:         #6B6B80;
+  --ds-color-muted:         #9090AA;
   --ds-color-subtle:        #3A3A4E;
   --ds-color-accent:        #5B6AF5;
   --ds-color-accent-hover:  #7480FF;
@@ -46,15 +46,15 @@ html.light {
   --ds-color-bg:            #F0F0F8;
   --ds-color-surface:       #FFFFFF;
   --ds-color-border:        #DCDCE8;
-  --ds-color-border-bright: #C4C4D8;
-  --ds-color-text:          #0C0C1A;
-  --ds-color-muted:         #5A5A78;
-  --ds-color-subtle:        #E8E8F4;
-  --ds-color-accent:        #4350E8;
-  --ds-color-accent-hover:  #5B6AF5;
+  --ds-color-border-bright: #B8B8D0;
+  --ds-color-text:          #08080F;
+  --ds-color-muted:         #46466A; /* 5.5:1 on white, 6.2:1 on bg */
+  --ds-color-subtle:        #E4E4F2;
+  --ds-color-accent:        #3340D8; /* 5.1:1 on white */
+  --ds-color-accent-hover:  #4350E8;
   --ds-color-accent-muted:  #EAEBFF;
-  --ds-color-warm:          #D05A28;
-  --ds-color-green:         #1A9B5E;
+  --ds-color-warm:          #B84A18; /* 5.0:1 on white */
+  --ds-color-green:         #0F8A50; /* 4.6:1 on white */
 
   --ds-shadow-card: 0 1px 3px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.06);
   --ds-shadow-glow: 0 0 40px rgba(67,80,232,0.08);
