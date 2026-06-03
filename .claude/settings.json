@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/SAMARTH/AppData/Local/Temp/portfolio-verify/**)",
+      "PowerShell(npm run dev 2>&1)",
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 5 2>&1)",
+      "PowerShell(Get-Process -Name \"node\" -ErrorAction SilentlyContinue | Stop-Process -Force; Start-Sleep -Seconds 1; npm run dev 2>&1 | Tee-Object -FilePath \"$env:TEMP\\\\nextjs-output.txt\")",
+      "PowerShell(Start-Sleep -Seconds 5; Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 10 2>&1 | Out-Null; Start-Sleep -Seconds 3; Get-Content \"$env:TEMP\\\\nextjs-output.txt\" -ErrorAction SilentlyContinue)"
+    ]
+  }
+}

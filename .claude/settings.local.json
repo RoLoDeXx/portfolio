@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(Get-Content \"C:\\\\Users\\\\SAMARTH\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-SAMARTH-Downloads-portfolio-portfolio\\\\93bbf7ba-6d79-481a-80e5-cf16f1150673\\\\tasks\\\\bsj42elfz.output\" -Wait)",
+      "Bash(Select-String -Pattern \"added|error|warn|npm ERR\")",
+      "Bash(Get-Content \"C:\\\\Users\\\\SAMARTH\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-SAMARTH-Downloads-portfolio-portfolio\\\\93bbf7ba-6d79-481a-80e5-cf16f1150673\\\\tasks\\\\bsj42elfz.output\" -Tail 20)",
+      "PowerShell(Get-Process -Name \"node\",\"npm\" -ErrorAction SilentlyContinue)",
+      "PowerShell(npm --version)",
+      "PowerShell(node --version)",
+      "Bash(powershell -Command \"Get-Content 'C:\\\\Users\\\\SAMARTH\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-SAMARTH-Downloads-portfolio-portfolio\\\\93bbf7ba-6d79-481a-80e5-cf16f1150673\\\\tasks\\\\bxbjea20w.output' -Wait | Select-String --line-buffered 'Ready|Error|error|localhost'\")",
+      "Bash(gh auth *)",
+      "PowerShell($env:GITHUB_TOKEN)",
+      "PowerShell($env:GH_TOKEN)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:rolodexx.github.io)",
+      "Bash(git commit -m ' *)",
+      "Bash(git remote *)",
+      "PowerShell(Start-Sleep -Seconds 8; Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 10 2>&1 | Select-Object StatusCode, @{n='ok';e={$_.StatusCode -eq 200}})"
+    ]
+  }
+}
